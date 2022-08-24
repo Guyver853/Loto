@@ -33,6 +33,11 @@ class Card:
         self.chisla = chisla
 
 
+    # def show_numbers(self):
+    #     for number in self.numbers:
+    #         print(number)
+
+
 
     def __str__(self): # Приводим к строковому виду. 3 строки по 5 чисел
         stroka1 = sorted(self.chisla[:5])
@@ -48,7 +53,7 @@ class Card:
         """
         return result
 
-    def is_empty(self): # Проверка, зачеркнуты ли все цифры
+    def pustota(self): # Проверка, зачеркнуты ли все цифры
         for item in self.chisla:
             if not item.zacherk:
                 return False

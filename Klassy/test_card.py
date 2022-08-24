@@ -29,13 +29,13 @@ class TestCard:
         self.chisla_karty = [9, 43, 62, 74, 90, 2, 27, 75, 78, 82, 41, 56, 63, 76, 86]
         self.card = Card(self.chisla_karty)
 
-    def test_is_empty(self): #
-        assert not self.card.is_empty()
+    def test_pustota(self): #
+        assert not self.card.pustota()
         # Если вычеркнуть все чифры?
         for item in self.chisla_karty:
             self.card.zacherknuto(item)
 
-        assert self.card.is_empty()
+        assert self.card.pustota()
 
     def test_str(self): # Сравниваем строки карточек
         result = """
